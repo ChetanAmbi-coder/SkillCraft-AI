@@ -97,6 +97,164 @@ This log is updated every active development day. It is the honest record of wha
 
 ---
 
+## DAY 2 — FIRST PRODUCT INTERFACE
+
+**Date:** September 30, 2026
+**Objective:** Build the first real user-facing experience — a landing page and career goal onboarding flow.
+**Status:** ✅ Complete
+
+---
+
+### What Was Done
+
+Built the complete Day 2 feature set: a polished landing page and a career goal selector with form validation, localStorage persistence, and a success state. All implemented with plain HTML, CSS, and vanilla JavaScript — no frameworks, no backend, no external libraries.
+
+---
+
+### Features Implemented
+
+| Feature | Description |
+|---|---|
+| Landing page | Hero, problem statement, four-stage journey, how-it-works, features, CTA, footer |
+| Sticky navigation | Desktop links + mobile hamburger menu with aria attributes |
+| Career goal modal | Opens on "Start Your Journey" click from any button on the page |
+| Onboarding form | Four fields: career goal (select), skill level (radio cards), hours/week (number input), learning goal (select) |
+| Client-side validation | All four fields validated; inline error messages shown without `alert()`; visual error states on form groups |
+| localStorage persistence | User profile saved as JSON; survives browser refresh; pre-fills form on return visit |
+| Success state | Confirmation view with summary of user's selections |
+| Returning user banner | Animated bottom banner shown on page load when saved profile exists; includes "Update Goal" shortcut |
+| Responsive design | Tested at desktop (1200px+), tablet (900px), mobile (600px and below) |
+| Accessibility | `aria-*` attributes throughout; keyboard-accessible modal and radio cards; focus management; `prefers-reduced-motion` respected |
+
+---
+
+### Technologies Used
+
+- **HTML5** — semantic elements (`<main>`, `<nav>`, `<section>`, `<article>`, `<footer>`, `<dl>`, `<fieldset>`, `<legend>`)
+- **CSS** — CSS custom properties (design tokens), CSS Grid, Flexbox, `clamp()` for fluid type, `backdrop-filter`, `@media` queries, CSS animations
+- **Vanilla JavaScript** — DOM manipulation, event handling, `localStorage` API, JSON serialization, XSS-safe `innerHTML` via `createTextNode`
+- **Browser APIs** — `localStorage`, `document.getElementById`, `querySelectorAll`, `addEventListener`, `DOMContentLoaded`
+
+---
+
+### Project Structure Created
+
+```
+SkillCraft-AI/
+├── index.html          ← Landing page + modal markup
+├── css/
+│   └── style.css       ← All styles (20 organized sections)
+├── js/
+│   └── app.js          ← All JavaScript (modular, commented)
+├── docs/
+│   ├── DEVELOPMENT_LOG.md
+│   └── PROJECT_ROADMAP.md
+├── architecture.md
+├── README.md
+└── .gitignore
+```
+
+---
+
+### Important Technical Decisions
+
+1. **localStorage structure** — Stored as a single JSON object under the key `skillcraft_user_profile`. Structure: `{ careerGoal, skillLevel, hoursPerWeek, learningGoal, savedAt }`. `savedAt` included as an ISO timestamp for future use (e.g., "you last updated your goal 3 days ago").
+
+2. **Modal approach** — Used a single modal element with two views (form view and success view) toggled by JavaScript, rather than two separate modals. Simpler, less DOM, one animation setup.
+
+3. **Radio cards over a plain select** — Skill level uses visually styled radio cards rather than a `<select>` dropdown. This makes the three choices more visually distinguishable and matches the feel of modern onboarding flows. Standard `<input type="radio">` underneath ensures full accessibility.
+
+4. **No `alert()` for validation** — All validation messages are rendered as inline `<span>` elements with `role="alert"` and `aria-live="polite"`. Screen readers announce them; sighted users see them in context.
+
+5. **Separate CSS/JS files** — Not inlined in HTML. This is the correct pattern for maintainability even at small scale. As the project grows, there may be multiple pages sharing the same stylesheet.
+
+6. **XSS protection in innerHTML** — The `renderSuccessSummary()` function uses `document.createTextNode()` to escape all user-supplied values before inserting them via `innerHTML`. This prevents cross-site scripting even though the data only comes from `localStorage`.
+
+7. **CSS custom properties for all design values** — Defined in `:root` and used throughout. This means changing the color scheme or spacing system requires editing one block, not hunting through hundreds of lines.
+
+8. **`novalidate` on the form** — The HTML `required` attributes exist for semantics and browser fallback, but `novalidate` disables native browser validation popups. Our custom JS validation gives us full control over the UI.
+
+---
+
+### Testing Performed
+
+| Test | Result |
+|---|---|
+| Landing page loads in browser | ✅ Pass |
+| Desktop navigation renders correctly | ✅ Pass |
+| Mobile hamburger opens/closes menu | ✅ Pass |
+| "Start Your Journey" (all 4 buttons) opens modal | ✅ Pass |
+| Modal closes on ✕ button | ✅ Pass |
+| Modal closes on overlay click | ✅ Pass |
+| Modal closes on Escape key | ✅ Pass |
+| Submitting empty form shows all 4 validation errors | ✅ Pass |
+| Selecting values clears their respective errors | ✅ Pass |
+| Hours field rejects 0, negatives, and values > 80 | ✅ Pass |
+| Hours field rejects non-integer values | ✅ Pass |
+| Valid form submission saves to localStorage | ✅ Pass |
+| Success state displays correct summary | ✅ Pass |
+| Page refresh — localStorage data survives | ✅ Pass |
+| Returning user banner appears after refresh | ✅ Pass |
+| "Update Goal" in banner opens modal with prefilled form | ✅ Pass |
+| Dismiss banner hides it | ✅ Pass |
+| Responsive layout on tablet (900px) | ✅ Pass |
+| Responsive layout on mobile (600px) | ✅ Pass |
+| No JavaScript console errors on load | ✅ Pass |
+| Diagnostics: HTML | ✅ No issues |
+| Diagnostics: JS | ✅ No issues |
+| Diagnostics: CSS | ✅ 1 benign warning (webkit-only spinner removal) |
+
+---
+
+### Problems Encountered
+
+1. **CSS `appearance` property order** — The linter warned that `-webkit-appearance: none` appeared before the standard `appearance: none`. Fixed by reordering: `-webkit-appearance` first, then `appearance`.
+
+2. **`showError` key mapping** — The form group IDs use a different naming convention from the error element IDs (`fg-hours` vs `hoursPerWeek`). Resolved with explicit mapping logic in the `showError` / `clearError` functions.
+
+3. **Spinner removal CSS** — Removing number input spinners requires the vendor-prefixed `-webkit-inner-spin-button` and the Firefox-specific `-moz-appearance: textfield`. There is no standard CSS property for this. The linter warning on this line is expected and acceptable.
+
+---
+
+### What Was Learned
+
+1. **CSS custom properties (design tokens)** are the correct way to manage a design system — changing one variable in `:root` updates the entire UI.
+
+2. **`localStorage` is synchronous and can throw** — It can fail in private browsing mode or when storage is full. Always wrap `localStorage` operations in `try/catch`.
+
+3. **ARIA is a contract, not decoration** — `aria-hidden="true"` actually hides elements from screen readers. `role="alert"` and `aria-live="polite"` cause screen readers to announce content changes. These attributes have real effects and must be toggled correctly.
+
+4. **`innerHTML` is dangerous with user data** — Even data from your own `localStorage` should be escaped before insertion. The `createTextNode` pattern is the safe approach.
+
+5. **Modal focus management matters** — When a modal opens, focus should move into it. When it closes, focus should return to the element that opened it. This was implemented via `dom._lastOpener`.
+
+---
+
+### Current Status
+
+Day 2 is complete. The SkillCraft-AI landing page is a real, functional webpage. A user can visit it, understand the product, fill out their career goal, and have their data saved across browser sessions.
+
+No backend. No AI. No database. Just a clean, honest foundation.
+
+---
+
+### Next Recommended Step (Day 3)
+
+Build a **"My Dashboard" page** (`dashboard.html`) that:
+- Reads the saved user profile from localStorage
+- Displays a placeholder personalized roadmap UI (static, not AI-generated yet)
+- Shows the user's career goal and progress state
+- Gives the user a reason to return
+
+This establishes the post-onboarding experience before any backend work begins.
+
+---
+
+*Entry written by: Kiro (AI assistant)*
+*Human review: Pending*
+
+---
+
 <!-- Template for future days:
 
 ## DAY N — [TITLE]

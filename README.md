@@ -6,11 +6,18 @@ A platform for students, beginners, and career switchers who want practical, job
 
 ---
 
-## ⚠️ Current Status: Day 1 — Planning & Foundation
+## ✅ Current Status: Day 2 — Landing Page + Career Onboarding
 
-This project is in active development. It is **not yet functional**. No application code exists yet. We are in the planning and architecture phase.
+The first real user-facing experience is live. Open `index.html` in any browser to try it.
 
-Follow the full journey in [`DEVELOPMENT_LOG.md`](./DEVELOPMENT_LOG.md).
+**What works today:**
+- Landing page with hero, features, journey breakdown, and CTA
+- Career goal selector modal (four-question onboarding form)
+- Client-side form validation with inline error messages
+- localStorage persistence — your goal survives a browser refresh
+- Returning user banner when you revisit
+
+Follow the full journey in [`docs/DEVELOPMENT_LOG.md`](./docs/DEVELOPMENT_LOG.md).
 
 ---
 
@@ -61,19 +68,34 @@ SkillCraft-AI is one platform that addresses all four.
 
 ---
 
+## How to Run
+
+No build step, no server required.
+
+1. Open `index.html` in any modern browser (Chrome, Firefox, Edge, Safari)
+2. Click "Start Your Journey"
+3. Fill out the career goal form
+4. Your selections are saved to localStorage automatically
+
+That's it. No installation needed.
+
+---
+
 ## Project Structure
 
 ```
 SkillCraft-AI/
-├── PROJECT_ROADMAP.md      ← Full 600-day roadmap, phases, milestones
-├── DEVELOPMENT_LOG.md      ← Day-by-day log of what was built and decided
-├── README.md               ← You are here
-├── .gitignore              ← Covers Node.js, Python, Android, IDE, secrets
-└── docs/
-    └── architecture.md     ← Architecture decisions (being decided Day 2+)
+├── index.html              ← Landing page (open this in a browser)
+├── css/
+│   └── style.css           ← All styles
+├── js/
+│   └── app.js              ← All JavaScript
+├── docs/
+│   ├── DEVELOPMENT_LOG.md  ← Day-by-day build log
+│   └── PROJECT_ROADMAP.md  ← Full 600-day roadmap
+├── architecture.md         ← Architecture decisions
+└── README.md               ← You are here
 ```
-
-Source code will live in subdirectories to be created in Phase 1 (Days 2–30).
 
 ---
 

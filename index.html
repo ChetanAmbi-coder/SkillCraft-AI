@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkillCraft-AI — Learn practical skills, build real projects, prove your abilities, and start earning. Your AI-guided career journey starts here." />
+  <title>SkillCraft-AI — Learn. Build. Prove. Earn.</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="SkillCraft-AI home">
+        <span class="logo-icon" aria-hidden="true">⚡</span>
+        SkillCraft<span class="logo-accent">-AI</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#journey">The Journey</a></li>
+      </ul>
+      <button class="btn btn-primary nav-cta" id="nav-start-btn" aria-label="Start your learning journey">
+        Start Your Journey
+      </button>
+      <!-- Mobile hamburger -->
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="nav-links-mobile" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#how-it-works" class="nav-mobile-link">How It Works</a></li>
+        <li><a href="#features" class="nav-mobile-link">Features</a></li>
+        <li><a href="#journey" class="nav-mobile-link">The Journey</a></li>
+        <li>
+          <button class="btn btn-primary nav-mobile-cta" id="nav-mobile-start-btn">
+            Start Your Journey
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-badge" aria-label="AI-Powered Learning Platform">
+          <span class="badge-dot" aria-hidden="true"></span>
+          AI-Powered Career Guidance
+        </div>
+        <h1 id="hero-heading" class="hero-headline">
+          From <span class="headline-highlight">Zero</span> to<br />
+          <span class="headline-highlight">Paid Professional</span>
+        </h1>
+        <p class="hero-subtext">
+          SkillCraft-AI gives you a personalized learning roadmap, real-world projects to build, 
+          a portfolio to prove your skills, and a path to your first paid opportunity — all in one place.
+        </p>
+        <div class="hero-tagline" aria-label="Core journey: Learn, Build, Prove, Earn">
+          <span class="tagline-step">Learn</span>
+          <span class="tagline-arrow" aria-hidden="true">→</span>
+          <span class="tagline-step">Build</span>
+          <span class="tagline-arrow" aria-hidden="true">→</span>
+          <span class="tagline-step">Prove</span>
+          <span class="tagline-arrow" aria-hidden="true">→</span>
+          <span class="tagline-step tagline-step--earn">Earn</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" id="hero-start-btn" aria-label="Start your SkillCraft journey">
+            Start Your Journey
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+          <a href="#how-it-works" class="btn btn-ghost btn-large">
+            See How It Works
+          </a>
+        </div>
+        <p class="hero-note" aria-label="No account required to begin">
+          <span aria-hidden="true">✓</span> Free to start &nbsp;&nbsp;
+          <span aria-hidden="true">✓</span> No account required &nbsp;&nbsp;
+          <span aria-hidden="true">✓</span> Personalized to your goals
+        </p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card-stack">
+          <div class="hero-card hero-card--back"></div>
+          <div class="hero-card hero-card--mid"></div>
+          <div class="hero-card hero-card--front">
+            <div class="hc-label">Your Path</div>
+            <div class="hc-goal">Full-Stack Developer</div>
+            <div class="hc-steps">
+              <div class="hc-step hc-step--done">HTML &amp; CSS Fundamentals</div>
+              <div class="hc-step hc-step--done">JavaScript Basics</div>
+              <div class="hc-step hc-step--active">React Foundations</div>
+              <div class="hc-step">Node.js &amp; APIs</div>
+              <div class="hc-step">Your First Project →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THE PROBLEM SECTION ==================== -->
+    <section class="problem-section" aria-labelledby="problem-heading">
+      <div class="section-container">
+        <div class="section-label">The Problem</div>
+        <h2 id="problem-heading" class="section-heading">
+          Most learning platforms stop at the "Learn" part
+        </h2>
+        <p class="section-subtext">
+          You finish a course. You get a certificate. You still don't have the job. 
+          The gap between "I studied this" and "I got paid for this" is where most people get stuck.
+        </p>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">😵</div>
+            <h3>Too much content, no direction</h3>
+            <p>YouTube, Udemy, Coursera — the internet has everything. But nothing tells you exactly what to learn in what order for your specific goal.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">📄</div>
+            <h3>Certificates don't convince anyone</h3>
+            <p>Employers and clients want proof of work, not proof of watching videos. A certificate from an online course rarely opens doors on its own.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">🚪</div>
+            <h3>No path to the first paid gig</h3>
+            <p>The hardest part isn't learning — it's crossing the gap from "I know this" to "someone paid me to use this." Most platforms leave you there.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== JOURNEY SECTION ==================== -->
+    <section class="journey-section" id="journey" aria-labelledby="journey-heading">
+      <div class="section-container">
+        <div class="section-label">The SkillCraft Path</div>
+        <h2 id="journey-heading" class="section-heading">
+          Four stages. One connected journey.
+        </h2>
+        <p class="section-subtext">
+          SkillCraft-AI doesn't just teach you — it walks with you from your first lesson to your first paid opportunity.
+        </p>
+        <ol class="journey-steps" role="list">
+          <li class="journey-step">
+            <div class="journey-step-number" aria-hidden="true">01</div>
+            <div class="journey-step-content">
+              <div class="journey-step-tag">LEARN</div>
+              <h3 class="journey-step-title">Get a roadmap built for you</h3>
+              <p class="journey-step-desc">
+                Tell us your career goal and where you're starting from. SkillCraft-AI builds a structured, personalized learning path — not a random list of videos, but a real sequence that mirrors how professionals actually learn.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step">
+            <div class="journey-step-number" aria-hidden="true">02</div>
+            <div class="journey-step-content">
+              <div class="journey-step-tag">BUILD</div>
+              <h3 class="journey-step-title">Work on real projects</h3>
+              <p class="journey-step-desc">
+                At every stage of your roadmap, you're assigned real-world projects — not toy examples. These are the kinds of things actual clients and employers care about. You build them, you own them.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step">
+            <div class="journey-step-number" aria-hidden="true">03</div>
+            <div class="journey-step-content">
+              <div class="journey-step-tag">PROVE</div>
+              <h3 class="journey-step-title">Your work becomes your portfolio</h3>
+              <p class="journey-step-desc">
+                Every project you complete goes into a public, shareable portfolio. It shows what you can actually do — not just what courses you sat through. This is your proof.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step">
+            <div class="journey-step-number" aria-hidden="true">04</div>
+            <div class="journey-step-content">
+              <div class="journey-step-tag journey-step-tag--earn">EARN</div>
+              <h3 class="journey-step-title">Real clients find you</h3>
+              <p class="journey-step-desc">
+                Clients discover your portfolio projects and approach you directly. SkillCraft-AI helps scope the project and facilitates the payment. You do the work, you get paid.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-section" id="how-it-works" aria-labelledby="how-heading">
+      <div class="section-container">
+        <div class="section-label">How It Works</div>
+        <h2 id="how-heading" class="section-heading">Simple to start. Powerful over time.</h2>
+        <div class="how-grid">
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">1</div>
+            <h3>Tell us your goal</h3>
+            <p>Pick a career path and tell us your current skill level and available time. Takes two minutes.</p>
+          </div>
+          <div class="how-connector" aria-hidden="true"></div>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">2</div>
+            <h3>Get your roadmap</h3>
+            <p>SkillCraft-AI generates a step-by-step learning roadmap customized to your goal, level, and schedule.</p>
+          </div>
+          <div class="how-connector" aria-hidden="true"></div>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">3</div>
+            <h3>Build as you learn</h3>
+            <p>Each roadmap step includes a real project. Your work is saved, tracked, and turned into portfolio pieces.</p>
+          </div>
+          <div class="how-connector" aria-hidden="true"></div>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">4</div>
+            <h3>Start earning</h3>
+            <p>Once your portfolio grows, clients can discover your work and hire you directly through the platform.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section class="features-section" id="features" aria-labelledby="features-heading">
+      <div class="section-container">
+        <div class="section-label">Features</div>
+        <h2 id="features-heading" class="section-heading">Everything you need in one place</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎯</div>
+            <h3>Personalized Roadmaps</h3>
+            <p>AI-generated learning paths built around your specific career goal, current level, and available time — not a one-size-fits-all curriculum.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛠️</div>
+            <h3>Real-World Projects</h3>
+            <p>Every step of your learning includes a practical project. You're always building something real, not just watching and reading.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🗂️</div>
+            <h3>Automatic Portfolio</h3>
+            <p>Your completed projects build a public portfolio automatically. Share one link and let your work do the talking.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🤖</div>
+            <h3>AI Guidance</h3>
+            <p>Learn not just the skill, but how to use AI tools while practicing it. Every field is being changed by AI — you'll learn how to use it, not fear it.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">💼</div>
+            <h3>Client Marketplace</h3>
+            <p>Real clients discover learners through their portfolio projects. No cold-pitching, no bidding wars — they find you.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <h3>Progress Tracking</h3>
+            <p>See exactly where you are in your journey, what's coming next, and how your skills have grown since you started.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="section-container">
+        <h2 id="cta-heading" class="cta-heading">Ready to start your journey?</h2>
+        <p class="cta-subtext">
+          Pick your career goal. Get your roadmap. Start building today.
+        </p>
+        <button class="btn btn-primary btn-large btn-cta" id="cta-start-btn" aria-label="Begin your SkillCraft AI journey">
+          Start Your Journey
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon" aria-hidden="true">⚡</span>
+        SkillCraft<span class="logo-accent">-AI</span>
+        <p class="footer-tagline">Learn. Build. Prove. Earn.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#journey">The Journey</a></li>
+        </ul>
+      </nav>
+      <p class="footer-status">
+        🚧 &nbsp;Day 2 of a 600+ day build — 
+        <a href="docs/DEVELOPMENT_LOG.md" aria-label="View the development log">Follow the journey</a>
+      </p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SkillCraft-AI. Built in public, one day at a time.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== CAREER GOAL MODAL ==================== -->
+  <!--
+    This modal is hidden by default.
+    It is shown when the user clicks any "Start Your Journey" button.
+    It is controlled entirely by app.js.
+  -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-heading" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close career goal form">
+        <span aria-hidden="true">✕</span>
+      </button>
+
+      <!-- ONBOARDING FORM (shown by default inside modal) -->
+      <div class="modal-form-view" id="modal-form-view">
+        <div class="modal-header">
+          <div class="modal-step-indicator" aria-label="Step 1 of 1">
+            <span class="step-dot step-dot--active" aria-hidden="true"></span>
+            <span class="step-dot" aria-hidden="true"></span>
+          </div>
+          <h2 id="modal-heading" class="modal-title">Set Your Career Goal</h2>
+          <p class="modal-subtitle">
+            Answer four quick questions so SkillCraft-AI can prepare your journey.
+          </p>
+        </div>
+
+        <form class="onboarding-form" id="onboarding-form" novalidate>
+
+          <!-- FIELD 1: Career Goal -->
+          <div class="form-group" id="fg-career-goal">
+            <label class="form-label" for="career-goal">
+              What career are you aiming for?
+              <span class="form-required" aria-label="required">*</span>
+            </label>
+            <select class="form-select" id="career-goal" name="careerGoal" aria-describedby="career-goal-error" required>
+              <option value="" disabled selected>Choose a career path…</option>
+              <option value="full-stack-developer">Full-Stack Developer</option>
+              <option value="frontend-developer">Frontend Developer</option>
+              <option value="backend-developer">Backend Developer</option>
+              <option value="data-analyst">Data Analyst</option>
+              <option value="ai-ml-engineer">AI / ML Engineer</option>
+              <option value="ui-ux-designer">UI / UX Designer</option>
+              <option value="cybersecurity-engineer">Cybersecurity Engineer</option>
+            </select>
+            <span class="form-error" id="career-goal-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- FIELD 2: Skill Level -->
+          <div class="form-group" id="fg-skill-level">
+            <fieldset>
+              <legend class="form-label">
+                What is your current skill level?
+                <span class="form-required" aria-label="required">*</span>
+              </legend>
+              <div class="radio-group" role="group" aria-describedby="skill-level-error">
+                <label class="radio-card">
+                  <input type="radio" name="skillLevel" value="beginner" />
+                  <span class="radio-card-content">
+                    <span class="radio-card-icon" aria-hidden="true">🌱</span>
+                    <span class="radio-card-label">Beginner</span>
+                    <span class="radio-card-desc">Little or no prior experience</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="skillLevel" value="intermediate" />
+                  <span class="radio-card-content">
+                    <span class="radio-card-icon" aria-hidden="true">🌿</span>
+                    <span class="radio-card-label">Intermediate</span>
+                    <span class="radio-card-desc">Some experience, building confidence</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="skillLevel" value="advanced">
+                  <span class="radio-card-content">
+                    <span class="radio-card-icon" aria-hidden="true">🌳</span>
+                    <span class="radio-card-label">Advanced</span>
+                    <span class="radio-card-desc">Strong foundation, ready to specialize</span>
+                  </span>
+                </label>
+              </div>
+              <span class="form-error" id="skill-level-error" role="alert" aria-live="polite"></span>
+            </fieldset>
+          </div>
+
+          <!-- FIELD 3: Hours Per Week -->
+          <div class="form-group" id="fg-hours">
+            <label class="form-label" for="hours-per-week">
+              How many hours per week can you dedicate to learning?
+              <span class="form-required" aria-label="required">*</span>
+            </label>
+            <div class="hours-input-wrapper">
+              <input
+                class="form-input hours-input"
+                type="number"
+                id="hours-per-week"
+                name="hoursPerWeek"
+                min="1"
+                max="80"
+                placeholder="e.g. 10"
+                aria-describedby="hours-per-week-error hours-per-week-hint"
+                required
+              />
+              <span class="hours-unit" aria-hidden="true">hrs / week</span>
+            </div>
+            <span class="form-hint" id="hours-per-week-hint">Enter a number between 1 and 80</span>
+            <span class="form-error" id="hours-per-week-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- FIELD 4: Learning Goal -->
+          <div class="form-group" id="fg-learning-goal">
+            <label class="form-label" for="learning-goal">
+              What is your primary learning goal?
+              <span class="form-required" aria-label="required">*</span>
+            </label>
+            <select class="form-select" id="learning-goal" name="learningGoal" aria-describedby="learning-goal-error" required>
+              <option value="" disabled selected>Choose your goal…</option>
+              <option value="get-job-ready">Get job-ready</option>
+              <option value="get-internship">Get an internship</option>
+              <option value="start-freelancing">Start freelancing</option>
+              <option value="build-projects">Build projects</option>
+              <option value="change-careers">Change careers</option>
+              <option value="personal-growth">Learn for personal growth</option>
+            </select>
+            <span class="form-error" id="learning-goal-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large btn-full" id="form-submit-btn">
+              Begin My Journey
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- SUCCESS STATE (hidden until form is submitted) -->
+      <div class="modal-success-view" id="modal-success-view" aria-hidden="true">
+        <div class="success-icon" aria-hidden="true">🎉</div>
+        <h2 class="success-title">Your SkillCraft journey is ready.</h2>
+        <p class="success-subtitle">Here's what you told us:</p>
+        <dl class="success-summary" id="success-summary" aria-label="Your career goal summary">
+          <!-- Populated by app.js -->
+        </dl>
+        <p class="success-note">
+          Your selections have been saved. When you return, SkillCraft-AI will remember your goals.
+        </p>
+        <button class="btn btn-primary btn-large" id="success-close-btn">
+          Got it — let's go
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== RETURNING USER BANNER ==================== -->
+  <!--
+    Shown at the top of the page when a returning user's data is found in localStorage.
+    Hidden by default. Revealed by app.js on page load.
+  -->
+  <div class="returning-banner" id="returning-banner" aria-hidden="true" role="status" aria-live="polite">
+    <div class="returning-banner-inner">
+      <span class="returning-banner-text" id="returning-banner-text"></span>
+      <div class="returning-banner-actions">
+        <button class="btn btn-sm btn-ghost" id="returning-edit-btn" aria-label="Update your career goal">Update Goal</button>
+        <button class="btn btn-sm btn-icon" id="returning-dismiss-btn" aria-label="Dismiss welcome back message">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
