@@ -1,0 +1,346 @@
+# ============================================================
+# SkillCraft-AI — .gitignore
+# Covers: Node.js, Python, Android, OS, IDE, Secrets
+# ============================================================
+
+
+# ============================================================
+# NODE.JS / JAVASCRIPT / TYPESCRIPT
+# ============================================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+
+# Package manager locks (keep one, ignore others as needed)
+# Uncomment the ones you do NOT use:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Caches
+.npm
+.eslintcache
+.stylelintcache
+.turbo
+.parcel-cache/
+
+# Runtime
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Storybook
+storybook-static/
+
+# Testing
+coverage/
+.nyc_output/
+
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+.Python
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+.eggs/
+wheels/
+
+# Test/coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+pytestdebug.log
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# pyenv
+.python-version
+
+
+# ============================================================
+# ANDROID / KOTLIN / JAVA
+# ============================================================
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+*.hprof
+
+# Android build outputs
+build/
+local.properties
+
+# Android Studio / IntelliJ generated
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+.idea/androidTestConfiguration.xml
+captures/
+.externalNativeBuild/
+.cxx/
+*.ap_
+
+# Signing
+*.jks
+*.keystore
+*.p12
+
+# ProGuard
+proguard/
+*.map
+
+
+# ============================================================
+# SECRETS & ENVIRONMENT VARIABLES
+# ============================================================
+
+# Environment files — NEVER commit these
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+.env.production
+.env.*.local
+
+# Private keys and certificates
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.cer
+*.crt
+*.der
+
+# Auth / service account credentials
+*credentials*.json
+*service-account*.json
+*serviceAccount*.json
+firebase-adminsdk*.json
+google-services.json
+GoogleService-Info.plist
+
+# API key files
+*.secret
+secrets.json
+secrets.yaml
+secrets.yml
+
+
+# ============================================================
+# OPERATING SYSTEM FILES
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ============================================================
+# IDE & EDITOR FILES
+# ============================================================
+
+# VS Code — keep extensions.json, ignore personal settings
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# IntelliJ / Android Studio
+.idea/
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Vim
+*.swp
+*.swo
+*.swn
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# TextMate
+*.tmproj
+*.tmproject
+tmtags
+
+
+# ============================================================
+# DATABASES & STORAGE
+# ============================================================
+
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.s3db
+*.sl3
+
+
+# ============================================================
+# DOCKER
+# ============================================================
+
+.docker/
+docker-compose.override.yml
+
+
+# ============================================================
+# CLOUD & DEPLOYMENT
+# ============================================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+
+# Serverless
+.serverless/
+
+
+# ============================================================
+# MISCELLANEOUS
+# ============================================================
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Logs
+logs/
+*.log
+
+# Lock files (uncomment if not using)
+# *.lock
